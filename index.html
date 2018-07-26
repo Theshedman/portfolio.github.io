@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" media="screen" href="css/style.css">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav>
+          <a id="open_menu" class="mark" href="#">
+            &#9776;
+          </a>
+          <ul id="menu">
+            <li>
+              <a id="close_menu" class="mark close-menu" href="#">
+                &#10799;
+                <span>Close</span>
+              </a>
+            </li>
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#about">About Me</a>
+            </li>
+            <li>
+              <a href="#experience">Experience</a>
+            </li>
+            <li>
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a id="remove-border" href="#contact">Contact Me</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="heading">
+          <h1>AJAEGBU
+            <span>SHEDRACK</span>
+          </h1>
+          <h2>Front-End Developer</h2>
+        </div>
+        <img id="logo" src="img/logo.png" alt="logo image for the portfolio">
+      </header>
+      <main>
+        <article>
+          <!--W3C validation tool required that every ARTICLE AND SECTION element mush have at least one heading (h1-h6) and so I put the heading below, to meet their requirement, which I must hide in my css-->
+          <h2 class="must-hide">The heading that must be hidden</h2>
+          <img class="profile-img" src="img/profile.png" alt="Profile image">
+          <section id="about">
+            <h2>About Me</h2>
+            <p>My name is
+              <span>Ajaegbu Shedrack</span> but I am known as
+              <span>Theshedman</span>, a
+              <span>Front-End Developer</span> from Nigeria. I graduated from Enugu State University of Science and Technology,
+              Enugu Nigeria; from the department of Industrial Physics.</p>
+            <p>I am one of the
+              <span>Google African Challenge</span> scholars who made it to the Udacity Front-End Web Developer Nanodegree. I really
+              know my craft so well and can help get your front-end web development work done for you.</p>
+          </section>
+          <section id="experience">
+            <h2>Experience</h2>
+            <p>I have 3 years of professional experience working as a front-end developer. HTML, CSS, Bootstrap, jQuery, JavaScript,
+              ReactJs, Webpack, NPM and many others are among the tools that I have mastered and use in my development works.</p>
+          </section>
+          <section id="portfolio" class="portfolio">
+            <h2>Portfolio</h2>
+            <div class="works">
+              <div class="work work1">
+                <a href="#">
+                  <img src="img/coding.jpg" alt="code-site project" width="300" height="150">
+                  <div class="detail">
+                    <h3>Coding Platform Project</h3>
+                    <p>This is an online platform that allows its members to code together and collaboratively.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="work work2">
+                <a href="#">
+                  <img src="img/bg.jpg" alt="Learn code Project" width="300" height="150">
+                  <div class="detail">
+                    <h3>Learn Code Project</h3>
+                    <p>Where others may not still want to learn how to code because of the a lot of reasons behind their motives,
+                      I was asked to develop a platform that will help them learn coding easily and faster. And so this project
+                      was created to the satisfactions of my clients</p>
+                  </div>
+                </a>
+              </div>
+              <div class="work work3">
+                <a href="#">
+                  <img src="img/abstract.jpg" alt="blue code" width="300" height="150">
+                  <div class="detail">
+                    <h3>Blue Code</h3>
+                    <p>This is a project work I did for my client 3 years ago. He wrote to me later and was very happy he found
+                      someone like me to handle the project. What does that signify? It means that my client are always happy
+                      when I work for them because am good in the work. I know my crafts so well.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="work work4">
+                <a href="#">
+                  <img src="img/grid.jpg" alt="AI web based project" width="300" height="150">
+                  <div class="detail">
+                    <h3>AI Web Based project</h3>
+                    <p>I was contracted to design and develop the front-end part of the AI Web Based Project from one of ABBT
+                      Company which they sent email latter on to show me their happiness and appreciation.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="work work5">
+                <a href="#">
+                  <img src="img/workplace.jpg" alt="Progressive web app" width="300" height="150">
+                  <div class="detail">
+                    <h3>Progressive Web App PWA</h3>
+                    <p>It was amazing to my clients to know how good and in PWA projects and I just gave them exactly what they
+                      asked for. Go check it up yourself. It's amazing, isn't it?</p>
+                  </div>
+                </a>
+              </div>
+              <div class="work work6">
+                <a href="#">
+                  <img src="img/laptop.jpg" alt="Appotia project" width="300" height="150">
+                  <div class="detail">
+                    <h3>Appotia</h3>
+                    <p>Appotia is one of the front-end project I did sometime in mid 2015 for one of my clients. I can say that
+                      this is website project that put smile on that client.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </section>
+          <section id="contact">
+            <h2>Contact Me</h2>
+            <form method="post" target="#">
+              <div class="user-info">
+                <div class="input-data">
+                  <label for="name">Name:</label>
+                  <input type="text" name="name" id="name" placeholder="Michael Wesier">
+                </div>
+                <div class="input-data">
+                  <label for="email">Email:</label>
+                  <input type="email" name="email" id="email" placeholder="michaelwesier@gmail.com">
+                </div>
+              </div>
+              <textarea rows="12" cols="22" placeholder="Type your message here..."></textarea>
+              <button type="submit">Send</button>
+            </form>
+          </section>
+        </article>
+      </main>
+      <footer>
+        <div class="info">
+          <div class="copyright">
+            <i class="far fa-copyright"></i>2018 - Ajaegbu Shedrack
+          </div>
+          <div class="phone">
+            <i class="fas fa-phone"></i>+2348065172295</div>
+          <div class="email">
+            <i class="fab fab fa-google-plus-g"></i> shedrack3@gmail.com</div>
+        </div>
+        <div class="socials">
+          <div class="social">
+            <a class="twitter" href="https://twitter.com/AjaegbuShedrack">
+              <img src="img/twitter.png" alt="">
+            </a>
+          </div>
+          <div class="social">
+            <a class="facebook" href="https://www.facebook.com/Theshedmanlite">
+              <img src="img/facebook.png" alt="">
+            </a>
+          </div>
+          <div class="social">
+            <a class="linkedin" href="https://www.linkedin.com/in/ajaegbu-shedrack/">
+              <img src="img/linkedin.png" alt="">
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!--link to my js file-->
+    <script src="js/script.js"></script>
+  </body>
+
+</html>
