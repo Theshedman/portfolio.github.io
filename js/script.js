@@ -25,14 +25,3 @@ for (let i = 0; i <= close_menu.length; i++) {
     }
   }, false);
 }
-
-//close nav menu when the user click on anywhere on the page
-document.body.addEventListener("click", () => {
-    if (navMenu.classList.contains("open")) {
-      navMenu.classList.remove("open");
-
-      open_menu.classList.remove("open-menu");
-      closeNav.classList.add("close-menu");
-    }
-  }, false);
-}
