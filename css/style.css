@@ -1,0 +1,717 @@
+/*******************
+*
+* BASE STYLING
+*
+********************/
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  color: var(--DarkGrayColor);
+}
+
+/*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: calc(100vh - 100px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
+
+/* Assigning my color palette to css variables */
+
+:root {
+  --baseColor: #2caac2;
+  --accentColor: #ff4835;
+  --whiteColor: #fff;
+  --lightGrayColor: #f7f8fa;
+  --DarkGrayColor: #3a4a4d;
+}
+
+/* hide the h2 of the article element */
+
+.must-hide {
+  display: none;
+}
+
+p {
+  line-height: 1.6em;
+}
+
+/* Removing the default styles for a, ul and li elements */
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+/* styling the nav menu */
+
+header ul {
+  width: 300px;
+  transform: translate(-300px, 0);
+  transition: transform 0.24s ease;
+  position: absolute;
+}
+
+ul.open {
+  transform: translate(0, 0);
+}
+
+/* the header */
+
+header {
+  background-color: var(--baseColor);
+  height: 38vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo {
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin: 5px 3px 0 0;
+}
+
+/* Nav menu */
+
+.mark {
+  font-size: 1.2rem;
+  color: var(--whiteColor);
+  display: block;
+}
+
+.open-menu,
+.close-menu {
+  display: none;
+}
+
+nav ul {
+  background: var(--DarkGrayColor);
+}
+
+#close_menu {
+  background: var(--whiteColor);
+  text-align: right;
+  padding: 0.5em 0;
+  color: var(--baseColor);
+}
+
+#open_menu {
+  font-size: 1.5em;
+}
+
+nav ul li>a {
+  padding: 1.2em;
+  color: var(--lightGrayColor);
+  width: 100%;
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid var(--baseColor);
+}
+
+#remove-border {
+  border-bottom: none;
+}
+
+nav ul li>a:hover:not(#close_menu) {
+  color: var(--baseColor);
+  background: var(--lightGrayColor);
+}
+
+header h1 {
+  color: var(--whiteColor);
+}
+
+header h2 {
+  color: var(--DarkGrayColor);
+  font-size: 18px;
+  padding-bottom: 7px;
+  border-left: none;
+  padding-left: 0;
+}
+
+h2 {
+  color: var(--baseColor);
+}
+
+img {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.profile-img {
+  border-radius: 50%;
+  max-height: 150px;
+  max-width: 150px;
+  margin-top: -45px;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 900;
+}
+
+h2 {
+  border-left: 4px solid var(--accentColor);
+  padding-left: 4px;
+}
+
+.wrapper,
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* styles for the main element */
+
+main {
+  margin: 2.5px;
+}
+
+h3 {
+  color: var(--whiteColor);
+  border-bottom: 1px solid var(--baseColor);
+  margin-right: 23.5%;
+  margin-left: 23.5%;
+}
+
+section span {
+  background: var(--DarkGrayColor);
+  color: var(--lightGrayColor);
+  font-style: italic;
+}
+
+.work {
+  margin-bottom: 1.45em;
+  width: 90%;
+  margin: 25px auto;
+  box-shadow: 4px 6px 2px var(--DarkGrayColor);
+  background: var(--lightGrayColor);
+  z-index: auto;
+  position: relative;
+  transition: all 0.6s;
+}
+
+.detail {
+  background: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  font-size: 0.75em;
+  padding: 12px 3px 0 3px;
+  color: var(--lightGrayColor);
+  overflow-y: hidden;
+  position: absolute;
+  z-index: 2;
+  top: 33px;
+  left: 14px;
+  right: 14px;
+  bottom: 0;
+}
+
+.detail p {
+  font-size: 0.85em;
+}
+
+/* form styles */
+
+input {
+  height: 3.2em;
+  display: block;
+  margin: auto;
+}
+
+input,
+button,
+textarea {
+  width: 96%;
+  margin: 7px auto;
+}
+
+label {
+  font-weight: bold;
+  display: inline-block;
+  margin: 8px 0 -8px 10px;
+}
+
+button {
+  min-width: 48px;
+  min-height: 48px;
+  margin-top: 0;
+  margin-bottom: 14px;
+  background: var(--accentColor);
+  color: var(--whiteColor);
+  font-size: 1.1em;
+  border: 0 solid var(--whiteColor);
+}
+
+textarea {
+  height: 85px;
+}
+
+/* styles for footer element */
+
+footer {
+  background: var(--DarkGrayColor);
+  color: var(--lightGrayColor);
+  min-height: 15vh;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+footer a {
+  background-color: #fff;
+}
+
+.info {
+  text-align: center;
+  margin-top: 7px;
+}
+
+.fa-copyright {
+  margin-right: 10px;
+}
+
+.fa-phone {
+  color: var(--baseColor);
+  transform: rotate(90deg);
+  margin-right: 10px;
+}
+
+.fa-google-plus-g {
+  color: var(--accentColor);
+  margin-right: 5px;
+}
+
+.socials {
+  font-size: 3em;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  margin: 9px 0;
+}
+
+.socials img {
+  border-radius: 6px;
+}
+
+.facebook img {
+  width: 37px;
+}
+
+/*******************
+*
+* RESPONSIVE LAYOUT
+*
+********************/
+
+@media screen and (max-width: 430px) {
+  /* h1 child element changed to display block */
+  h1 span {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 431px) and (max-width: 499px) {
+  /*
+** Minor changes to the header and portfolio sections
+*/
+  /* change the display of the h1 text */
+  h1 span {
+    display: block;
+  }
+  /* Portfolio section retouched */
+  .work {
+    width: 92%;
+    height: 200px;
+  }
+  .work img {
+    height: 100%;
+  }
+  .detail {
+    top: 0;
+    left: 14px;
+    right: 14px;
+    bottom: 100px;
+  }
+  .detail p {
+    font-size: 1em;
+  }
+  .info {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 629px) {
+  /*
+** Major changes to the portfolio
+** Contact Me and Footer sections
+** Using FLEXBOX LAYOUT.
+*/
+  /* Restyling the Portfolio section */
+  .profile-img {
+    margin-top: -63px;
+  }
+  .works {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    height: 550px;
+  }
+  .work {
+    width: 240px;
+    margin: 0;
+    background: var(--lightGrayColor);
+    z-index: auto;
+    position: relative;
+  }
+  main {
+    margin: 0;
+  }
+  /* Touching the Form for the contact section */
+  input {
+    width: 310px;
+    height: 28px;
+  }
+  label {
+    display: block;
+    margin: 0;
+    align-self: center;
+  }
+  button,
+  textarea {
+    margin: 0 0 7px 0;
+    width: 100%;
+    align-self: flex-end;
+  }
+  textarea {
+    border: 5px solid var(--baseColor);
+  }
+  .user-info {
+    align-self: flex-end;
+    width: 100%;
+    background: var(--baseColor);
+  }
+  .input-data {
+    display: flex;
+  }
+  form {
+    display: flex;
+    align-items: center;
+    width: 88%;
+    margin: 0 auto;
+  }
+  /* changing the footer elements position */
+  footer {
+    min-height: 18vh;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .info {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 630px) {
+  /*
+  ** GRID LAYOUT is used for changing the layout of
+  ** the portfolio, contact me, and footer sections.
+  */
+  /* form for contact section redesigned */
+  form {
+    width: 97.5%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: auto;
+    background: var(--baseColor);
+    margin-bottom: 9px;
+  }
+  .user-info {
+    grid-column: 1 / span 5;
+    grid-row: 1 / 1;
+  }
+  .input-data {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  input {
+    grid-column: 2 / -1;
+  }
+  label {
+    grid-column: 1 / 1;
+    align-self: center;
+    font-weight: bold;
+  }
+  textarea {
+    grid-column: 6 / -1;
+    grid-row: span 2;
+    height: 91.5%;
+  }
+  button {
+    grid-column: 2 / span 4;
+  }
+  /* Portfolio section */
+  .portfolio {
+    margin-bottom: 18px;
+  }
+  .works {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 12px;
+    grid-template-rows: 1fr 1fr;
+  }
+  .work {
+    margin: 0;
+    width: 100%;
+  }
+  .work1 {
+    order: 6;
+    grid-column: 9 / span 4;
+  }
+  .work2 {
+    order: 3;
+    grid-column: 9 / span 4;
+  }
+  .work3 {
+    order: 5;
+    grid-column: 5 / span 4;
+  }
+  .work4 {
+    order: 2;
+    grid-column: 5 / span 4;
+  }
+  .work5 {
+    order: 4;
+    grid-column: 1 / span 4;
+  }
+  .work6 {
+    order: 1;
+    grid-column: 1 / span 4;
+  }
+  /* changing the FOOTER LAYOUT */
+  footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    min-height: 8vh;
+  }
+  .info {
+    text-align: left;
+    margin-top: 0;
+    grid-column: 1 / span 4;
+    grid-row: span 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    font-size: 1em;
+    text-align: center;
+  }
+  .copyright {
+    margin: 12px 0 0 0;
+    grid-column: 2 / span 2;
+  }
+  .phone {
+    margin: 12px 0 0 0;
+    grid-column: 1 / span 2;
+  }
+  .email {
+    margin: 12px 0 0 0;
+    grid-column: 3 / span 2;
+  }
+  .fa-google-plus-g {
+    margin-right: 3px;
+    font-size: 1.5em;
+  }
+  .fa-copyright {
+    font-size: 1.5em;
+  }
+  .fa-phone {
+    font-size: 1.5em;
+  }
+  .socials {
+    grid-column: 5 / span 1;
+    grid-row: span 2;
+    font-size: 3em;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 65%;
+  }
+  #logo {
+    order: 1;
+    grid-column: 1 / span 1;
+    margin-left: 7px;
+  }
+  .heading {
+    order: 2;
+    grid-column: 2 / span 9;
+    grid-row: 1 / span 3;
+    font-size: 1.5em;
+  }
+  nav {
+    order: 3;
+    grid-column: 1 / -1;
+    grid-row: 3;
+    background: var(--DarkGrayColor);
+  }
+  header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: auto;
+    transform: translate(0, 0);
+    position: static;
+  }
+  #open_menu,
+  .close-menu {
+    display: none;
+  }
+  nav ul li>a,
+  #remove-border {
+    color: var(--lightGrayColor);
+    border-bottom: 0;
+  }
+  nav ul li>a:hover:not(#close_menu) {
+    color: var(--baseColor);
+    background: var(--lightGrayColor);
+    border-bottom: 1px solid var(--accentColor);
+  }
+  .profile-img {
+    width: 20%;
+    margin: 0;
+    position: absolute;
+    top: 3px;
+    right: 12px;
+    max-height: 90px;
+    max-width: 90px;
+  }
+  #about {
+    margin-top: 18px;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  #about,
+  #experience,
+  #contact {
+    width: 95%;
+    margin: 23px auto;
+  }
+  .heading {
+    font-size: 1.8em;
+  }
+  .heading h2 {
+    padding-top: 20px;
+    font-size: 1em;
+  }
+  .profile-img {
+    top: 60px;
+    right: 165px;
+    max-height: 130px;
+    max-width: 130px;
+  }
+  nav {
+    margin-top: 27.5px;
+  }
+  .portfolio {
+    width: 95%;
+    margin: auto;
+  }
+  form {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 956px) {
+  .heading h1 {
+    font-size: 1.6em;
+  }
+  .heading h2 {
+    margin-top: -2px;
+  }
+  .wrapper {
+    font-size: 1.2em;
+  }
+  .profile-img {
+    top: 65px;
+    right: 200px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1118px) {
+  .profile-img {
+    top: 30px;
+    right: 130px;
+  }
+  #about,
+  #experience,
+  #contact,
+  .portfolio {
+    width: 85%;
+    border-right: 0;
+  }
+  section h2 {
+    border-right: 0;
+    border-bottom: 5px solid var(--accentColor);
+    width: 170px;
+  }
+}
