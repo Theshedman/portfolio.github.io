@@ -43,11 +43,11 @@ h6 {
 /* Assigning my color palette to css variables */
 
 :root {
-  --baseColor: #2caac2;
-  --accentColor: #ff4835;
+  --baseColor: #6b16c7;
+  --accentColor: #c5f809;
   --whiteColor: #fff;
-  --lightGrayColor: #f7f8fa;
-  --DarkGrayColor: #3a4a4d;
+  --lightGrayColor: #d4f49c;
+  --DarkGrayColor: #848484;
 }
 
 /* hide the h2 of the article element */
